@@ -27,10 +27,11 @@ jobs:
           gradle-version: '8.8'
 
       - name: Build mod
+        working-directory: donothing-mod
         run: gradle build
 
       - name: Upload mod jar
         uses: actions/upload-artifact@v4
         with:
           name: drlzasmp-not-hacks
-          path: build/libs/donothing-1.0.0.jar
+          path: donothing-mod/build/libs/donothing-1.0.0.jar
